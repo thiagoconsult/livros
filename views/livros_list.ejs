@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <header>
+        <h1>
+            <%= title %>
+        </h1>
+    </header>
+
+    <nav>
+        <a href="#">Lista de Livros</a>
+        <a href="/cadastrar">Cadastrar Livro</a>
+    </nav>
+
+    <main>
+        <h2>
+            <%= subtitle %>
+        </h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 5%;">ID</th>
+                    <th style="width: 20%;">Título</th>
+                    <th style="width: 45;">Descrição</th>
+                    <th style="width: 20%;">Autor</th>
+                    <th style="width: 10%;">Lançamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% lista.forEach((livro)=>{ %>  
+                    <tr>
+                        <td><%= livro.id %></td>
+                        <td><%= livro.titulo %></td>
+                        <td><%= livro.descricao %></td>
+                        <td><%= livro.autor %></td>
+                        <td><%= livro.lancamento %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <h3><%= title %></h3>
+    </footer>
+    
+</body>
+</html>

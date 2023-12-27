@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <header>
+        <h1>
+            <%= title %>
+        </h1>
+    </header>
+
+    <nav>
+        <a href="/">Lista de Livros</a>
+        <a href="#">Cadastrar Livro</a>
+    </nav>
+
+    <main>
+        <h2>
+            <%= subtitle %>
+        </h2>
+        
+        <form action="/cadastrar" method="POST">
+            <label>Título:
+                <input type="text" name="titulo" required>
+            </label>
+            <label>Descrição:
+                <textarea type="text" name="descricao" required rows="3"></textarea>
+            </label>
+            <label>Autor:
+                <input type="text" name="autor" required>
+            </label>
+            <label>Lançamento:
+                <input type="date" name="lancamento" required>
+            </label>
+            <input type="submit" value="Salvar" class="btn">
+        </form>
+
+    </main>
+
+    <footer>
+        <h3><%= title %></h3>
+    </footer>
+    
+</body>
+</html>
